@@ -1,0 +1,18 @@
+{
+  "type": "postgres",
+  "host": "172.30.128.1",
+  "port": 5432,
+  "username": "karaszewski@admin.com",
+  "password": "root",
+  "database": "susana_db",
+  "entities": ["dist/**/*{.ts,.js}"],
+  "migrations": ["src/migration/**/*.ts"],
+  "subscribers": ["src/subscriber/**/*.ts"],
+  "migrationsRun": false,
+  "logging": true,
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}
