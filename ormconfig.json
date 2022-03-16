@@ -1,13 +1,18 @@
 {
   "type": "postgres",
-  "host": "172.30.128.1",
+  "host": "ec2-18-233-114-179.compute-1.amazonaws.com",
   "port": 5432,
-  "username": "karaszewski@admin.com",
-  "password": "root",
-  "database": "susana_db",
+  "username": "bvnwuzlvjjwlci",
+  "password": "134b7e89c7da4f836cff15a537ccdca54ff0bf4fd19e6ab5ccb2ba83b3f9a04a",
+  "database": "db2n3utbusqerq",
   "entities": ["dist/**/*{.ts,.js}"],
-  "migrations": ["src/migration/**/*.ts"],
+  "migrations": ["dist/**/*{.ts,.js}"],
   "subscribers": ["src/subscriber/**/*.ts"],
+  "extra": {
+    "ssl": {
+      "rejectUnauthorized": false
+    }
+  },
   "migrationsRun": false,
   "logging": true,
   "cli": {
