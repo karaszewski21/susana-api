@@ -6,7 +6,7 @@
   "password": "134b7e89c7da4f836cff15a537ccdca54ff0bf4fd19e6ab5ccb2ba83b3f9a04a",
   "database": "db2n3utbusqerq",
   "entities": ["dist/**/*{.ts,.js}"],
-  "migrations": ["dist/**/*{.ts,.js}"],
+  "migrations": ["dist/migration/*{.ts,.js}"],
   "subscribers": ["src/subscriber/**/*.ts"],
   "extra": {
     "ssl": {

@@ -1,4 +1,14 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+  OneToMany,
+  ManyToOne,
+} from 'typeorm';
+import { RoleEntity } from './roleEntity';
+import { TasksEntity } from './tasksEntity';
 
 @Entity()
 export class AccountEntity {
@@ -10,4 +20,10 @@ export class AccountEntity {
 
   @Column()
   password: string;
+
+  @OneToMany(() => TasksEntity, (task) => task.account)
+  tasks: TasksEntity[];
+
+  @ManyToOne(() => RoleEntity, (role) => role.account)
+  roles: RoleEntity[];
 }
